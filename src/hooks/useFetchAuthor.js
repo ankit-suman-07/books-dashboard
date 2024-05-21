@@ -2,14 +2,14 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const useFetchBooks = (author) => {
+const useFetchAuthors = (author) => {
     const [birthDate, setBirthDate] = useState("");
     const [topWork, setTopWork] = useState("");
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
-            setLoading(true);
+            // setLoading(true);
             try {
                 const response = await axios.get(`https://openlibrary.org/search/authors.json?q=${author}`);
                 setBirthDate(response.data.birth_data);
@@ -17,7 +17,7 @@ const useFetchBooks = (author) => {
             } catch (error) {
                 setError(error);
             }
-            setLoading(false);
+            // setLoading(false);
         };
 
         fetchData();
@@ -26,4 +26,4 @@ const useFetchBooks = (author) => {
     return { birthDate, topWork, error };
 };
 
-export default useFetchBooks;
+export default useFetchAuthors;

@@ -1,9 +1,53 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Dashboard.css";
 
+import axios from 'axios';
+
+import Table from '../table/Table';
+import Pagination from "../pagination/Pagination";
+
 const Dashboard = () => {
+    const [book, setBook] = useState(null);
+    const [page, setPage] = useState(11);
+    const [perPage, setPerPage] = useState(10);
+    const [query, setQuery] = useState("all");
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState("");
+
+    const fetchBookData = async () => {
+        setLoading(true);
+        try {
+            const response = await axios.get(`https://openlibrary.org/search.json?q=${query}&page=${page}&limit=${perPage}`);
+            // await setData(response.data.docs);
+            setBook(response.data.docs)
+            console.log("Book Res: ", response.data.docs[0])
+        } catch (error) {
+            setError(error);
+        }
+        setLoading(false);
+    };
+
+    useEffect(() => {
+        fetchBookData();
+    }, []);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+    else {
+        console.log("Book: ", book)
+        //setUsername(details.results[0].name.first)
+    }
+
     return (
-        <div>Dashboard</div>
+        <div>
+            {
+                book && book.map((item, idx) => {
+                    return <Table book={item} key={idx} id={idx} />
+                })
+            }
+            <Pagination />
+        </div>
     )
 }
 
