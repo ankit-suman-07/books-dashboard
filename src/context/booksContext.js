@@ -5,12 +5,20 @@ import useFetchAuthors from '../hooks/useFetchAuthor';
 export const BookContext = createContext();
 
 export const BookProvider = ({ children }) => {
-    const [book, setBook] = useState('light');
-    // const { birthDate, topWork, error } = useFetchAuthors(author);
+    const [book, setBook] = useState(null);
+    const [page, setPage] = useState(1);
+    const [perPage, setPerPage] = useState(10);
+    const [query, setQuery] = useState("all");
 
     const values = {
         book,
-        setBook
+        setBook,
+        page,
+        setPage,
+        perPage,
+        setPerPage,
+        query,
+        setQuery
     }
 
     return (

@@ -1,16 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import "./Dashboard.css";
 
 import axios from 'axios';
 
 import Table from '../table/Table';
 import Pagination from "../pagination/Pagination";
+import { BookContext } from '../../context/booksContext';
 
 const Dashboard = () => {
-    const [book, setBook] = useState(null);
-    const [page, setPage] = useState(11);
-    const [perPage, setPerPage] = useState(10);
-    const [query, setQuery] = useState("all");
+    const { book, setBook, query, page, perPage } = useContext(BookContext);
+
+    // const [book, setBook] = useState(null);
+    // const [page, setPage] = useState(11);
+    // const [perPage, setPerPage] = useState(10);
+    // const [query, setQuery] = useState("all");
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
@@ -29,7 +32,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchBookData();
-    }, []);
+    }, [page]);
 
     if (loading) {
         return <div>Loading...</div>;

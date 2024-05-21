@@ -31,7 +31,7 @@ const Table = ({ book, id }) => { // Destructure props correctly
         if (book && book.author_name) {
             fetchAuthorData();
         }
-    }, [book, birth, topWork]); // Add 'book' as a dependency
+    }, [book.author_name]); // Add 'book' as a dependency
 
     if (loading || topWork === "") {
         return <div>Loading...</div>;
@@ -52,7 +52,7 @@ const Table = ({ book, id }) => { // Destructure props correctly
                 {book.first_publish_year}
             </div>
             <div className='subject cell' >
-                {book.subject.map((item, idx) => {
+                {book.subject && book.subject.map((item, idx) => {
                     return (<span key={idx} >{item}-</span>)
                 })}
             </div>
