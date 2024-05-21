@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import Table from '../table/Table';
 import Pagination from "../pagination/Pagination";
+import PerPage from '../pagination/PerPage';
 import { BookContext } from '../../context/booksContext';
 
 const Dashboard = () => {
@@ -32,7 +33,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchBookData();
-    }, [page]);
+    }, [page, perPage]);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -49,6 +50,7 @@ const Dashboard = () => {
                     return <Table book={item} key={idx} id={idx} />
                 })
             }
+            <PerPage />
             <Pagination />
         </div>
     )
