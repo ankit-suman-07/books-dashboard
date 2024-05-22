@@ -5,6 +5,36 @@
     grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr;
 }
 
+.table-header {
+    border: 2px solid green;
+    background-color: #333333;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.table-header span {
+    margin-left: 10px;
+}
+
+.table-header img {
+    border: 2px solid #ffff;
+    height: 50%;
+    margin-right: 10px;
+    padding: 2px;
+    border-radius: 50%;
+    background-color: #ffff;
+    transition: all ease 0.3s;
+}
+
+.table-header img:hover {
+    cursor: pointer;
+    transform: rotateZ(20deg);
+}
 .cell {
     border: 2px solid blue;
 }

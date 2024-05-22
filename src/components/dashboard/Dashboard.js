@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import "./Dashboard.css";
 
 import axios from 'axios';
+import SortIcon from "../../assets/sort.png";
 
 import Table from '../table/Table';
 import Pagination from "../pagination/Pagination";
@@ -46,26 +47,33 @@ const Dashboard = () => {
     return (
         <div>
             <div className='table-row' >
-                <div className='title cell' >
-                    Book Title
+                <div className='table-header' >
+                    <span>Book Title</span>
+                    <img src={SortIcon} alt='sort-icon' />
                 </div>
-                <div className='author cell' >
-                    Author Name
+                <div className='table-header' >
+                    <span>Author Name</span>
+                    <img src={SortIcon} alt='sort-icon' />
                 </div>
-                <div className='ratings cell' >
-                    Avg. Rating
+                <div className='table-header' >
+                    <span>Avg. Rating</span>
+                    <img src={SortIcon} alt='sort-icon' />
                 </div>
-                <div className='year cell' >
-                    First Published In
+                <div className='table-header' >
+                    <span>First Published In</span>
+                    <img src={SortIcon} alt='sort-icon' />
                 </div>
-                <div className='cell' >
-                    Subjects
+                <div className='table-header' >
+                    <span>Subjects</span>
+                    <img src={SortIcon} alt='sort-icon' />
                 </div>
-                <div className='birth cell' >
-                    Author's Birth Year
+                <div className='table-header' >
+                    <span>Author's Birth Year</span>
+                    <img src={SortIcon} alt='sort-icon' />
                 </div>
-                <div className='top cell' >
-                    Author's Top Work
+                <div className='table-header' >
+                    <span>Author's Top Work</span>
+                    <img src={SortIcon} alt='sort-icon' />
                 </div>
 
             </div>
