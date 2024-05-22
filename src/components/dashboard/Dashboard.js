@@ -81,9 +81,7 @@ const Dashboard = () => {
 
     return (
         <div className='dashboard' >
-            <div className='top-bar'>
-                <Search />
-            </div>
+
 
             <div className='table-row'>
                 <div className='table-header'>

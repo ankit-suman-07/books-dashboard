@@ -1,5 +1,6 @@
 import Dashboard from "./components/dashboard/Dashboard";
 import Navbar from "./components/navbar/Navbar";
+import TopBar from "./components/top-bar/TopBar";
 import Pagination from "./components/pagination/Pagination";
 import Footer from "./components/footer/Footer";
 
@@ -9,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <TopBar />
       <Dashboard />
       <Pagination />
       <Footer />
