@@ -50,7 +50,7 @@ const Table = ({ book, id }) => { // Destructure props correctly
                 {book.author_name}
             </div>
             <div className='ratings cell' >
-                {book.ratings_average}
+                {Math.round(book.ratings_average * 10) / 10}
             </div>
             <div className='year cell' >
                 {book.first_publish_year}
