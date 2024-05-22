@@ -121,7 +121,7 @@ const Dashboard = () => {
             })}
 
             <PerPage />
-            <Pagination />
+
         </div>
     )
 }

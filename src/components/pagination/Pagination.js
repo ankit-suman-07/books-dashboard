@@ -3,6 +3,9 @@ import "./Pagination.css";
 
 import { BookContext } from '../../context/booksContext';
 
+import NextIcon from "../../assets/next.png";
+import PrevIcon from "../../assets/prev.png";
+
 const Pagination = () => {
     const { page, setPage } = useContext(BookContext);
 
@@ -15,10 +18,14 @@ const Pagination = () => {
     }
 
     return (
-        <div>
-            <button onClick={previous} >Prev</button>
-            {page}
-            <button onClick={() => setPage(page + 1)} >Next</button>
+        <div className='pagination' >
+            <button onClick={previous} className='prev'>
+                <img src={PrevIcon} alt='prev-icon' />
+            </button>
+            <div>{page}</div>
+            <button onClick={() => setPage(page + 1)} className='next' >
+                <img src={NextIcon} alt='next-icon' />
+            </button>
         </div>
     )
 }
