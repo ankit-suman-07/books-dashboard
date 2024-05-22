@@ -1,0 +1,44 @@
+.navbar {
+    background-color: #333;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    margin-left: 20px;
+    color: #ffff;
+    font-size: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.nav-socials {
+    height: 40px;
+    margin-right: 20px;
+    display: flex;
+
+}
+
+.nav-socials a {
+    border: 2px solid #ffff;
+    border-radius: 50%;
+    background-color: #ffff;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    transition: all ease 0.3s;
+}
+
+.nav-socials a:hover {
+    cursor: pointer;
+    transform: rotateZ(20deg);
+}
+
+.nav-socials a img {
+    height: 80%;
+}
