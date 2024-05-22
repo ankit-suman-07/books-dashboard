@@ -118,7 +118,6 @@ const Dashboard = () => {
                 return <Table book={item} key={idx} id={idx} />
             })}
 
-            <PerPage />
 
         </div>
     )
