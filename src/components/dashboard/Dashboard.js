@@ -45,6 +45,30 @@ const Dashboard = () => {
 
     return (
         <div>
+            <div className='table-row' >
+                <div className='title cell' >
+                    Book Title
+                </div>
+                <div className='author cell' >
+                    Author Name
+                </div>
+                <div className='ratings cell' >
+                    Avg. Rating
+                </div>
+                <div className='year cell' >
+                    First Published In
+                </div>
+                <div className='cell' >
+                    Subjects
+                </div>
+                <div className='birth cell' >
+                    Author's Birth Year
+                </div>
+                <div className='top cell' >
+                    Author's Top Work
+                </div>
+
+            </div>
             {
                 book && book.map((item, idx) => {
                     return <Table book={item} key={idx} id={idx} />

@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import "./Table.css";
 import axios from 'axios';
 
+import Subjects from '../subjects/Subjects';
+
 const Table = ({ book, id }) => { // Destructure props correctly
     const [author, setAuthor] = useState("");
     const [error, setError] = useState("");
     const [topWork, setTopWork] = useState("");
     const [birth, setBirth] = useState("");
     const [loading, setLoading] = useState(false);
+
+    const [showSub, setShowSub] = useState(false);
 
     useEffect(() => {
         const fetchAuthorData = async () => {
@@ -51,10 +55,13 @@ const Table = ({ book, id }) => { // Destructure props correctly
             <div className='year cell' >
                 {book.first_publish_year}
             </div>
-            <div className='subject cell' >
-                {book.subject && book.subject.map((item, idx) => {
-                    return (<span key={idx} >{item}-</span>)
-                })}
+            <div className='cell' >
+                <button onClick={() => setShowSub(!showSub)} >
+                    Show Subjects
+                </button>
+                <div className={showSub ? 'subject' : 'hide'}  >
+                    {book.subject && <Subjects items={book.subject} />}
+                </div>
             </div>
             <div className='birth cell' >
                 {birth !== undefined ? birth : <span>NA</span>}
