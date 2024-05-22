@@ -1,17 +1,16 @@
 .table-row {
-    border: 2px solid red;
-    background-color: grey;
     display: grid;
-    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 0.6fr 0.8fr 1fr 0.8fr 1fr;
+        gap: 2px;
 }
 
 .table-header {
-    border: 2px solid green;
-    background-color: #333333;
+    background-color: #222222;
     color: #ffff;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
-    height: 40px;
+        font-weight: 600;
+            height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,11 +22,11 @@
 
 .table-header img {
     border: 2px solid #ffff;
-    height: 50%;
+    background-color: #ffff;
+        height: 40%;
     margin-right: 10px;
     padding: 2px;
     border-radius: 50%;
-    background-color: #ffff;
     transition: all ease 0.3s;
 }
 
@@ -36,20 +35,28 @@
     transform: rotateZ(20deg);
 }
 .cell {
-    border: 2px solid blue;
+    min-height: 70px;
+        background-color: #b0acac;
+        margin-top: 2px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: auto;
 }
 .hide {
     display: none;
 }
 
 .subject {
-    display: block;
     max-height: 60px;
-    overflow: hidden;
+    overflow: auto;
 }
 .row-loading {
     border: 4px solid #dbd6d6;
-    margin: 10px;
+    margin: 20px;
     border-radius: 50%;
     border-top: 2px solid #3333;
     width: 15px;

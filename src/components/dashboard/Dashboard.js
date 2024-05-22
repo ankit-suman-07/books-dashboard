@@ -113,11 +113,9 @@ const Dashboard = () => {
                 </div>
                 <div className='table-header'>
                     <span>Author's Birth Year</span>
-                    <img src={SortIcon} alt='sort-icon' />
                 </div>
                 <div className='table-header'>
                     <span>Author's Top Work</span>
-                    <img src={SortIcon} alt='sort-icon' />
                 </div>
             </div>
 

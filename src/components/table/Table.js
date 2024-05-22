@@ -72,12 +72,15 @@ const Table = ({ book, id }) => {
                 {book.first_publish_year}
             </div>
             <div className='cell' >
-                <button onClick={() => setShowSub(!showSub)} >
+                <div className='subject'  >
+                    {book.subject && <Subjects items={book.subject} />}
+                </div>
+                {/* <button onClick={() => setShowSub(!showSub)} >
                     Show Subjects
                 </button>
                 <div className={showSub ? 'subject' : 'hide'}  >
                     {book.subject && <Subjects items={book.subject} />}
-                </div>
+                </div> */}
             </div>
             <div className='birth cell' >
                 {birth || "--"}

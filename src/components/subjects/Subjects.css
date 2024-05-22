@@ -1,9 +1,9 @@
 .sub-span {
-    border: 2px solid blue;
+    font-size: 9px;
+        font-weight: 400;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .sub-outer {
-    border: 2px solid black;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
 }

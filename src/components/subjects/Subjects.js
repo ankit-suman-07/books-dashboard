@@ -8,7 +8,7 @@ const Subjects = ({ items }) => {
             {
                 items && items.map((sub) => {
                     return (
-                        <span className='sub-span' > {sub}</span>
+                        <span className='sub-span' > {sub}, </span>
                     );
                 })
             }
