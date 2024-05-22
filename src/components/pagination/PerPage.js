@@ -5,7 +5,7 @@ import DownIcon from "../../assets/down.png";
 
 const PerPage = () => {
     const { perPage, setPerPage } = useContext(BookContext);
-    const [visible, setVisible] = useState(true);
+    const [visible, setVisible] = useState(false);
 
     const togglePerPage = (num) => {
         setVisible(!visible);

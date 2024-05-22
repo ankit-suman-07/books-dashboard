@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext, useCallback } from 'react';
 import "./Dashboard.css";
 
+import { Mosaic } from 'react-loading-indicators';
+
 import axios from 'axios';
 import SortIcon from "../../assets/sort.png";
 
@@ -36,7 +38,12 @@ const Dashboard = () => {
     }, [fetchBookData]);
 
     if (loading) {
-        return <div>Loading...</div>;
+        return (
+            <div className='loading-screen' >
+                <Mosaic color="#7c7f7c" size="large" text="" textColor="" />
+            </div>
+
+        );
     }
 
     if (error) {

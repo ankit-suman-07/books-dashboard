@@ -1,9 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 import "./Table.css";
 import axios from 'axios';
+import { CSpinner } from '@coreui/react';
+import { Loader } from 'rsuite';
+
 
 import Subjects from '../subjects/Subjects';
 import { BookContext } from '../../context/booksContext';
+import PlaceholderLoading from 'react-placeholder-loading'
 
 const Table = ({ book, id }) => {
     const { bookTempData, setBookTempData } = useContext(BookContext);
@@ -41,7 +45,12 @@ const Table = ({ book, id }) => {
     }, [book.author_name]); // Add 'book' as a dependency
 
     if (loading) {
-        return <div>Loading...</div>;
+        return (
+            <div className='row-loading' >
+
+            </div>
+
+        );
     } else {
         console.log(book.title, " - ", book.author_name, " - ", book.ratings_average, " - ", book.first_publish_year, " - ", book.subject, " - ", birth, " - ", topWork);
     }
