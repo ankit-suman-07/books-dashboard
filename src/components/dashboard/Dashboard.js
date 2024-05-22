@@ -4,6 +4,7 @@ import "./Dashboard.css";
 import axios from 'axios';
 import SortIcon from "../../assets/sort.png";
 
+import Search from "../search/Search";
 import Table from '../table/Table';
 import Pagination from "../pagination/Pagination";
 import PerPage from '../pagination/PerPage';
@@ -34,7 +35,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         fetchBookData();
-    }, [page, perPage]);
+    }, [page, perPage, query]);
 
     if (loading) {
         return <div>Loading...</div>;
@@ -46,6 +47,10 @@ const Dashboard = () => {
 
     return (
         <div>
+            <div className='top-bar' >
+                <Search />
+            </div>
+
             <div className='table-row' >
                 <div className='table-header' >
                     <span>Book Title</span>
