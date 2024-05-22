@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react';
 import "./Search.css";
 
+import SearchIcon from "../../assets/search.png";
+
 import { BookContext } from '../../context/booksContext';
 
 const Search = () => {
@@ -8,15 +10,15 @@ const Search = () => {
 
     const [searchQuery, setSearchQuery] = useState("");
     return (
-        <div>
+        <div className='search' >
             <input
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search"
+                placeholder="Search a book"
             />
             <button onClick={() => setQuery(searchQuery)} >
-                Search
+                <img src={SearchIcon} alt='search-icon' />
             </button>
         </div>
     )

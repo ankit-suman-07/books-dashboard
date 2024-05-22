@@ -1,0 +1,36 @@
+.search {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.search input {
+    height: 90%;
+    border: 2px solid #95939333;
+    transition: all ease 0.3s;
+}
+
+.search input:hover {
+    padding: 2px;
+    border: 2px solid #cf6d6d;
+}
+
+.search button {
+    border: 4px solid #333333;
+    border-radius: 50%;
+    height: 100%;
+    margin-left: 2px;
+    transition: all ease 0.3s;
+}
+
+.search button:hover {
+    cursor: pointer;
+    transform: rotateZ(20deg);
+    margin-left: 5px;
+}
+
+.search button img {
+    height: 100%;
+}
