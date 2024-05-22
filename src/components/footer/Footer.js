@@ -3,7 +3,9 @@ import "./Footer.css";
 
 const Footer = () => {
     return (
-        <div>Footer</div>
+        <div className='footer' >
+            Made by <span>ankitsuman07@gmail.com</span>
+        </div>
     )
 }
 

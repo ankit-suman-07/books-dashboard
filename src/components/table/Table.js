@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import "./Table.css";
 import axios from 'axios';
 
 import Subjects from '../subjects/Subjects';
+import { BookContext } from '../../context/booksContext';
 
-const Table = ({ book, id }) => { // Destructure props correctly
+const Table = ({ book, id }) => {
+    const { bookTempData, setBookTempData } = useContext(BookContext);
+
     const [author, setAuthor] = useState("");
     const [error, setError] = useState("");
     const [topWork, setTopWork] = useState("");
@@ -37,9 +40,13 @@ const Table = ({ book, id }) => { // Destructure props correctly
         }
     }, [book.author_name]); // Add 'book' as a dependency
 
-    if (loading || topWork === "") {
+    if (loading) {
         return <div>Loading...</div>;
+    } else {
+        console.log(book.title, " - ", book.author_name, " - ", book.ratings_average, " - ", book.first_publish_year, " - ", book.subject, " - ", birth, " - ", topWork);
     }
+
+
 
     return (
         <div className='table-row' >
@@ -64,10 +71,10 @@ const Table = ({ book, id }) => { // Destructure props correctly
                 </div>
             </div>
             <div className='birth cell' >
-                {birth !== undefined ? birth : <span>NA</span>}
+                {birth || "--"}
             </div>
             <div className='top cell' >
-                {topWork}
+                {topWork || "--"}
             </div>
 
         </div>

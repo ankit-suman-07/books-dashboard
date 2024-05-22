@@ -1,14 +1,13 @@
 import React, { createContext, useState } from 'react';
-import useFetchAuthors from '../hooks/useFetchAuthor';
-
 
 export const BookContext = createContext();
 
 export const BookProvider = ({ children }) => {
-    const [book, setBook] = useState(null);
+    const [book, setBook] = useState([]);
     const [page, setPage] = useState(1);
     const [perPage, setPerPage] = useState(10);
     const [query, setQuery] = useState("all");
+    const [bookTempData, setBookTempData] = useState([]);
 
     const values = {
         book,
@@ -18,8 +17,10 @@ export const BookProvider = ({ children }) => {
         perPage,
         setPerPage,
         query,
-        setQuery
-    }
+        setQuery,
+        bookTempData,
+        setBookTempData
+    };
 
     return (
         <BookContext.Provider value={values}>
