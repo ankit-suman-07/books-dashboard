@@ -50,6 +50,9 @@
     justify-content: center;
 }
 
+.password-toggle:hover {
+    cursor: pointer;
+}
 .password-toggle img {
     width: 80%;
 }
@@ -65,6 +68,9 @@
     font-weight: 600;
 }
 
+.form-sign-btn:hover {
+    cursor: pointer;
+}
 .form-input-text {
     border: 2px solid #ffff;
     border-radius: 5px;

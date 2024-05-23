@@ -12,6 +12,9 @@
     align-items: center;
 }
 
+.google-sign-btn:hover {
+    cursor: pointer;
+}
 .google-icon {
     height: 100%;
     display: flex;
