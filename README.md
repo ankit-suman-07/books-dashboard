@@ -11,6 +11,7 @@ A Frontend project made using ReactJS.
 - **Sorting (aesc/desc)** functionality implemented for all the books column
 - Ability to **download** current data in .csv format
 - Web App made **responsive** and mobile-friendly
+- **Deployed** through Vercel.com using Continuous Deployment.
 
 ## Deployed at: [Link](https://books-dashboard.vercel.app/)
 
