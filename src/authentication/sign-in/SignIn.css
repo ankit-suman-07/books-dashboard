@@ -1,0 +1,80 @@
+.sign-in {
+    /* border: 2px solid black; */
+}
+
+.form-heading {
+    margin: 10px 20px 20px 20px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    text-align: center;
+    color: #ffff;
+}
+
+.form {
+    margin: 20px;
+    min-width: 250px;
+
+}
+
+.form-email {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.form-password {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.form-password-toggle {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.form-password-toggle .form-input-text {
+    width: calc(100% - 40px);
+}
+
+.password-toggle {
+    border: none;
+    background: none;
+    height: 33px;
+    width: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.password-toggle img {
+    width: 80%;
+}
+
+.form-sign-btn {
+    width: 100%;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 2px solid #ffff;
+    background-color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+.form-input-text {
+    border: 2px solid #ffff;
+    border-radius: 5px;
+    height: 30px;
+    padding-left: 5px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}

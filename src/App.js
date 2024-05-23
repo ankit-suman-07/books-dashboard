@@ -9,6 +9,7 @@ import Footer from "./components/footer/Footer";
 import "./App.css";
 
 import { BookContext } from "./context/booksContext";
+import Authentication from "./authentication/Authentication";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
               <Footer />
             </div>
           )
-          : <div>Log In</div>
+          : <Authentication />
       }
 
     </>
