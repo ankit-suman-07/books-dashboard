@@ -1,7 +1,60 @@
 .top-bar {
-    margin: 10px;
+    margin: 0 10px 10px 10px;
     height: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
         align-items: center;
         justify-content: space-between;
+}
+.user-bar {
+    margin: 0 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #ffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.user-bar span {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 3px;
+    color: #ffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.sign-out-btn {
+    border: 2px solid #ffff;
+    height: 30px;
+    width: 80px;
+    background-color: #d84a4a;
+    color: #ffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all ease 0.3s;
+}
+
+.sign-out-btn:hover {
+    border: 2px solid #d84a4a;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    color: #d84a4a;
+    background-color: #ffff;
+}
+
+@media screen and (max-width: 650px) {
+    .top-bar {
+        margin: 0 5px 5px 5px;
+    }
+
+    .user-bar {
+        margin: 0 5px;
+    }
 }

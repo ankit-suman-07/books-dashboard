@@ -22,7 +22,7 @@ const Pagination = () => {
             <button onClick={previous} className='prev'>
                 <img src={PrevIcon} alt='prev-icon' />
             </button>
-            <div>{page}</div>
+            <div className='pagination-no' >{page}</div>
             <button onClick={() => setPage(page + 1)} className='next' >
                 <img src={NextIcon} alt='next-icon' />
             </button>

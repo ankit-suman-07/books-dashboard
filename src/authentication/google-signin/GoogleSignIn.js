@@ -33,11 +33,10 @@ const GoogleSignIn = () => {
     return (
         <div>
             {loading || isSigningIn ? (
-                <p>Loading...</p>
+                <p>Signing In...</p>
             ) : currentUser ? (
                 <div>
-                    <p>Welcome, {currentUser.email}!</p>
-                    <button onClick={handleSignOut}>Sign Out</button>
+                        <p>Welcome, {currentUser.email}!</p>
                 </div>
             ) : (
                 <div>
