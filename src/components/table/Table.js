@@ -1,9 +1,9 @@
+// src/Table.js
 import React, { useState, useEffect, useContext } from 'react';
 import "./Table.css";
 import axios from 'axios';
 import { CSpinner } from '@coreui/react';
 import { Loader } from 'rsuite';
-
 
 import Subjects from '../subjects/Subjects';
 import { BookContext } from '../../context/booksContext';
@@ -27,12 +27,8 @@ const Table = ({ book, id }) => {
                 const response = await axios.get(`https://openlibrary.org/search/authors.json?q=${book.author_name}`);
                 console.log(id, " - author birth: ", response.data.docs[0].birth_date)
                 console.log(id, " - author top: ", response.data.docs[1].top_work)
-                // setAuthor(response.docs.name);
                 setTopWork(response.data.docs[1].top_work);
                 setBirth(response.data.docs[0].birth_date);
-                // console.log("Top : ", response.data.docs[1].top_work);
-                // console.log("Birth : ", response.data.docs[1].birth_date);
-                // console.log("author: ", response)
             } catch (error) {
                 setError(error.message || "An error occurred");
             }
@@ -42,20 +38,33 @@ const Table = ({ book, id }) => {
         if (book && book.author_name) {
             fetchAuthorData();
         }
-    }, [book.author_name]); // Add 'book' as a dependency
+    }, [book, book.author_name]); // Add 'book' as a dependency
+
+    useEffect(() => {
+        // Collect the book data and add to bookTempData
+        const bookData = {
+            title: book.title,
+            author_name: book.author_name,
+            ratings_average: Math.round(book.ratings_average * 10) / 10,
+            first_publish_year: book.first_publish_year,
+            subject: book.subject,
+            birth: birth || "--",
+            topWork: topWork || "--"
+        };
+
+        // Check if the bookData is already in bookTempData to avoid duplicates
+        if (!bookTempData.some(b => b.title === bookData.title && b.author_name === bookData.author_name)) {
+            setBookTempData(prevData => [...prevData, bookData]);
+        }
+    }, [birth, topWork]); // Run this effect when birth or topWork is updated
 
     if (loading) {
         return (
             <div className='row-loading' >
 
             </div>
-
         );
-    } else {
-        console.log(book.title, " - ", book.author_name, " - ", book.ratings_average, " - ", book.first_publish_year, " - ", book.subject, " - ", birth, " - ", topWork);
     }
-
-
 
     return (
         <div className='table-row' >
@@ -75,12 +84,6 @@ const Table = ({ book, id }) => {
                 <div className='subject'  >
                     {book.subject && <Subjects items={book.subject} />}
                 </div>
-                {/* <button onClick={() => setShowSub(!showSub)} >
-                    Show Subjects
-                </button>
-                <div className={showSub ? 'subject' : 'hide'}  >
-                    {book.subject && <Subjects items={book.subject} />}
-                </div> */}
             </div>
             <div className='birth cell  mobile-hide' >
                 {birth || "--"}
@@ -88,7 +91,6 @@ const Table = ({ book, id }) => {
             <div className='top cell  mobile-hide' >
                 {topWork || "--"}
             </div>
-
         </div>
     );
 };
