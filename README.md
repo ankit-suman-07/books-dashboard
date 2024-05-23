@@ -1,3 +1,4 @@
+## Resume [PDF Link](https://flowcv.com/resume/asuhgn35q8)
 # Books Dashboard Made using ReactJS
 
 ## Deployed at: [Link](https://books-dashboard.vercel.app/)
@@ -40,4 +41,27 @@ Step 4: Run App
 npm start
 ```
 
-## Resume [PDF Link](https://flowcv.com/resume/asuhgn35q8)
+## Output Screenshots
+
+### Authentication Page
+![My Image](Output_SS/1.png)
+![My Image](Output_SS/4.png)
+
+### Loading
+![My Image](Output_SS/2.png)
+
+### Opening Screen
+![My Image](Output_SS/5.png)
+
+### Row Loading
+![My Image](Output_SS/6.png)
+
+### Table View
+![My Image](Output_SS/3.png)
+![My Image](Output_SS/7.png)
+
+### Footer and Pagination
+![My Image](Output_SS/8.png)
+
+## Resume [PDF Link](https://flowcv.com/resume/ov7ge7b4pa)
+![My Image](resume.png)
