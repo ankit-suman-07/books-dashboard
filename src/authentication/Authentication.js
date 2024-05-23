@@ -16,10 +16,10 @@ const Authentication = () => {
         <div className='authentication' >
             <div className='auth-left' >
                 <div className='auth-logo' >
-                    Taskify
+                    Books.
                 </div>
                 <div className='auth-logo-quote' >
-                    All your writeups at one place.
+                    Read everything. All at once.
                 </div>
             </div>
             <div className='auth-right' >

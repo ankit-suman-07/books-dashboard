@@ -9,16 +9,17 @@ import Footer from "./components/footer/Footer";
 import "./App.css";
 
 import { BookContext } from "./context/booksContext";
+import { useAuth } from "./context/userContext";
 import Authentication from "./authentication/Authentication";
 
 
 function App() {
-  const { user } = useContext(BookContext);
+  const { userLoggedIn } = useAuth();
 
   return (
     <>
       {
-        user
+        userLoggedIn
           ? (
             <div className="App">
               <Navbar />
