@@ -4,9 +4,9 @@
 
 ## How to run locally
 
-Step 1:
+Step 1: Clone teh repository
 ```
-https://github.com/ankit-suman-07/tax-calculator.git
+https://github.com/ankit-suman-07/books-dashboard.git
 ```
 Step 2: Open project folder
 ```
