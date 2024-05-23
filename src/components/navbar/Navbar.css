@@ -42,3 +42,21 @@
 .nav-socials a img {
     height: 80%;
 }
+@media screen and (max-width: 600px) {
+    .nav-logo {
+        margin-left: 5px;
+        font-size: 30px;
+    }
+
+    .nav-socials {
+        height: 25px;
+        margin-right: 5px;
+    }
+
+    .nav-socials a {
+        height: 25px;
+        width: 25px;
+        margin-left: 5px;
+        transition: all ease 0.3s;
+    }
+}

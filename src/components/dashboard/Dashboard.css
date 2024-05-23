@@ -3,10 +3,21 @@
         min-height: 85vh;
 }
 
+
 .loading-screen {
     margin: 20px;
     min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+@media screen and (max-width: 600px) {
+    .mobile-hide {
+        display: none;
+    }
+
+    .dashboard {
+        margin: 4px;
+        min-height: 90vh;
+    }
 }

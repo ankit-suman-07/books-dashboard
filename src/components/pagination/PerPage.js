@@ -15,7 +15,7 @@ const PerPage = () => {
     return (
         <div className='per-page-div' >
             <div className="toggle-div" >
-                Showing rows: <button className='page-btn-toggle' onClick={() => setVisible(!visible)} >
+                Rows: <button className='page-btn-toggle' onClick={() => setVisible(!visible)} >
                     {perPage}
                     <img src={DownIcon} alt="down-icon" />
                 </button>

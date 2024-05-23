@@ -82,10 +82,10 @@ const Table = ({ book, id }) => {
                     {book.subject && <Subjects items={book.subject} />}
                 </div> */}
             </div>
-            <div className='birth cell' >
+            <div className='birth cell  mobile-hide' >
                 {birth || "--"}
             </div>
-            <div className='top cell' >
+            <div className='top cell  mobile-hide' >
                 {topWork || "--"}
             </div>
 

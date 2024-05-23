@@ -86,3 +86,37 @@
         transform: rotate(360deg);
     }
 }
+@media screen and (max-width: 600px) {
+    .mobile-hide {
+        display: none;
+    }
+
+    .table-row {
+        grid-template-columns: 1fr 1fr 0.7fr 0.9fr 0.9fr;
+    }
+
+    .table-header {
+        font-size: 9px;
+        font-weight: 600;
+        height: 50px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .table-header span {
+        margin-left: 2px;
+    }
+
+    .table-header img {
+        height: 30%;
+        margin-right: 2px;
+        padding: 0px;
+    }
+
+    .cell {
+        font-size: 10px;
+        font-weight: 600;
+        text-align: center;
+    }
+}

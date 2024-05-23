@@ -111,10 +111,10 @@ const Dashboard = () => {
                     <span>Subjects</span>
                     <img src={SortIcon} alt='sort-icon' onClick={sortSubjects} />
                 </div>
-                <div className='table-header'>
+                <div className='table-header mobile-hide'>
                     <span>Author's Birth Year</span>
                 </div>
-                <div className='table-header'>
+                <div className='table-header mobile-hide'>
                     <span>Author's Top Work</span>
                 </div>
             </div>
