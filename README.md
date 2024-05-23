@@ -1,4 +1,16 @@
 # Books Dashboard Made using ReactJS
+A Frontend project made using ReactJS.
+
+## Features
+- Authentication implemented using Firebase
+- Fetch API data using axios library
+- Display the data in formatted tabular format
+- Search for the book by it's title
+- Pagination support
+- Option to view 10, 50 or 100 books in a single page
+- Sorting (aesc/desc) functionality implemented for all the books column
+- Ability to download current data in .csv format
+- Web App made responsive and mobile-friendly
 
 ## Deployed at: [Link](https://books-dashboard.vercel.app/)
 
@@ -40,16 +52,6 @@ Step 4: Run App
 npm start
 ```
 
-## Features
-- Authentication implemented using Firebase
-- Fetch API data using axios library
-- Display the data in formatted tabular format
-- Search for the book by it's title
-- Pagination support
-- Option to view 10, 50 or 100 books in a single page
-- Sorting (aesc/desc) functionality implemented for all the books column
-- Ability to download current data in .csv format
-- Web App made responsive and mobile-friendly
 
 ## Output Screenshots
 
